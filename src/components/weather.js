@@ -29,6 +29,7 @@ function DisplayData(data) {
                 autoWrapCol: true,
                 licenseKey: 'non-commercial-and-evaluation',
             });
+            window.hotInstance = table;
         } else {
             table.loadData(data)
         }
