@@ -10,6 +10,9 @@ declare global {
 test.beforeEach(async ({ page }) => {
   await page.goto('/');
 });
+test.afterEach(async ({ page }) => {
+  await page.close();
+});
 
 test('Has search input', async ({ page }) => {
   await expect(page.locator("#search")).toBeVisible();
